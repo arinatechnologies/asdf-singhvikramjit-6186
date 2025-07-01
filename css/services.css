@@ -1,0 +1,339 @@
+/* Base Styles */
+:root {
+    --primary-color: #0066ff;
+    --secondary-color: #333;
+    --accent-color: #00cc99;
+    --light-bg: #f8f9fa;
+    --dark-bg: #222;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 1rem auto 0;
+}
+
+p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    text-align: center;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.6rem 1.5rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* 1️⃣ Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--light-bg);
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 3rem;
+}
+
+.hero .subheading {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 2️⃣ Service Grid */
+.services-grid {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+/* 3️⃣ Why Choose Us */
+.why-us {
+    background-color: var(--light-bg);
+    border-radius: 20px;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reason {
+    text-align: center;
+    padding: 2rem;
+}
+
+.reason-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.reason h3 {
+    margin-bottom: 1rem;
+}
+
+/* 4️⃣ Comparison Table */
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison th, .comparison td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.comparison th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.comparison tr:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+.comparison i.fa-check {
+    color: var(--accent-color);
+}
+
+.comparison i.fa-times {
+    color: #ff4444;
+}
+
+.comparison-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 5️⃣ Testimonials */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.testimonial-avatar {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-card blockquote::before,
+.testimonial-card blockquote::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--accent-color);
+    opacity: 0.3;
+}
+
+.client-info {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* 6️⃣ Final CTA */
+.final-cta {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+}
+
+.final-cta h2, .final-cta p {
+    color: var(--white);
+}
+
+.final-cta .btn-primary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--white);
+}
+
+.final-cta .btn-primary:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.final-cta .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.final-cta .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+    
+    .grid-container, .reasons-container, .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison table {
+        font-size: 0.9rem;
+    }
+}
